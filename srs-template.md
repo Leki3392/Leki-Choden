@@ -11,7 +11,7 @@
 State the purpose of this SRS and the intended readership (developers, testers, auditors, regulators, customer).
 ### 1.2 · Scope of the Product
 - **Product name:** `<SELISE Supplyflow>`
-- **What the product will do:** `<things>`
+- **What the product will do:** `<It is the digital platform for SELISE employee to place an order to supplies like snacks, stationaris and etc.>`
 - **What the product will NOT do:** `<one paragraph — scope boundaries>`
 - **Benefits / goals:** `<business outcomes>`
 - **Applicability:** `<target users, deployment contexts>`
