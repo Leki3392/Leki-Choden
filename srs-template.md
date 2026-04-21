@@ -5,7 +5,6 @@
 > Target length: 30–100+ pages. This template gives you the full skeleton — fill every subsection; if truly N/A, state so.
 
 ---
-
 ## § 01 · Introduction
 
 ### 1.1 · Purpose
