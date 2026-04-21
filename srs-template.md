@@ -12,9 +12,9 @@ State the purpose of this SRS and the intended readership (developers, testers, 
 ### 1.2 · Scope of the Product
 - **Product name:** `<SELISE Supplyflow>`
 - **What the product will do:** `< Provide a digital online portal for employees to browse a real-time catalog of office supplies such as snacks and stationery.Enable users to submit bulk requests and track order statuses through a centralized dashboard.Allow administrators to manage stock levels, approve or deny requests, and generate procurement reports.Automatically synchronize inventory by returning items to stock if a pending order is canceled.Incorporate accessibility features, including keyboard navigation and screen-reader compatibility for error messages.>`
-- **What the product will NOT do:** `<one paragraph — scope boundaries>`
-- **Benefits / goals:** `<business outcomes>`
-- **Applicability:** `<target users, deployment contexts>`
+- **What the product will NOT do:** `<The system is strictly for internal office needs and will not process financial transactions or credit card payments.It will not manage logistics for shipping items to employees' homes.While mobile-responsive, it will not include a native application for the App Store.The approval workflow is direct-to-admin and does not support complex, multi-level manager approval hierarchies.>`
+- **Benefits / goals:** `< 1)Improved Efficiency: Replaces slow email-based ordering with a high-performance system where requests appear in the manager's inbox within 2 seconds.2)Inventory Accuracy: Provides a "single source of truth" dashboard to prevent stockouts and record-keeping errors.3)Equitable Distribution: Enforces a limit of two units per item per request to ensure fair access for all employees.4)Transparency: Offers real-time visibility into stock levels and request statuses (Pending or Accepted).>`
+- **Applicability:** `<1)Target Users: Internal SELISE employees (Requesters) and inventory managers (Admins).2)Deployment Contexts: A mobile-responsive web portal optimized for desktop, tablet, and mobile browsers.3)Network Performance: Designed to function on standard 4G connections, ensuring 99% of login attempts are completed within two seconds.>`
 
 ### 1.3 · Definitions, Acronyms, Abbreviations
 | Term | Meaning |
