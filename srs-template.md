@@ -8,48 +8,45 @@
 ## § 01 · Introduction
 
 ### 1.1 · Purpose
-State the purpose of this SRS and the intended readership (developers, testers, auditors, regulators, customer).
+The purpose of this document is to define the functional and non-functional requirements for the Selise SupplyFlow portal. This SRS is intended for developers, testers, and stakeholders involved in the transition from an email-based ordering system to a centralized digital platform.
 ### 1.2 · Scope of the Product
-- **Product name:** `<SELISE Supplyflow>`
-- **What the product will do:** `< Provide a digital online portal for employees to browse a real-time catalog of office supplies such as snacks and stationery.Enable users to submit bulk requests and track order statuses through a centralized dashboard.Allow administrators to manage stock levels, approve or deny requests, and generate procurement reports.Automatically synchronize inventory by returning items to stock if a pending order is canceled.Incorporate accessibility features, including keyboard navigation and screen-reader compatibility for error messages.>`
-- **What the product will NOT do:** `<The system is strictly for internal office needs and will not process financial transactions or credit card payments.It will not manage logistics for shipping items to employees' homes.While mobile-responsive, it will not include a native application for the App Store.The approval workflow is direct-to-admin and does not support complex, multi-level manager approval hierarchies.>`
-- **Benefits / goals:** `< 1)Improved Efficiency: Replaces slow email-based ordering with a high-performance system where requests appear in the manager's inbox within 2 seconds.2)Inventory Accuracy: Provides a "single source of truth" dashboard to prevent stockouts and record-keeping errors.3)Equitable Distribution: Enforces a limit of two units per item per request to ensure fair access for all employees.4)Transparency: Offers real-time visibility into stock levels and request statuses (Pending or Accepted).>`
-- **Applicability:** `<1)Target Users: Internal SELISE employees (Requesters) and inventory managers (Admins).2)Deployment Contexts: A mobile-responsive web portal optimized for desktop, tablet, and mobile browsers.3)Network Performance: Designed to function on standard 4G connections, ensuring 99% of login attempts are completed within two seconds.>`
+- **Product name:** SELISE Supplyflow
+- **What the product will do:**  An online portal designed to manage internal office supplies. It allows employees to browse a real-time catalog, submit bulk requests, and enables admins to track inventory, approve requests, and generate reports.
+- **What the product will NOT do:** The system will not handle credit card payments, shipping to home addresses, or complex multi-level manager approvals. It is not a native mobile application.
+- **Benefits / goals:** Eliminates delays and errors of email-based systems, prevents stockouts, and provides a central dashboard for accurate record-keeping.
+- **Applicability:** Internal office use for employees and administrative staff.
 
 ### 1.3 · Definitions, Acronyms, Abbreviations
 | Term | Meaning |
-|---|---|
-| SRS | Software Requirements Specification |
-| `<acronym>` | `<expansion>` |
+SRSS oftware Requirements Specification Admin User responsible for stock management and request approval Requester Employee seeking to order office supplies 
 
 ### 1.4 · References
-Numbered list of every document this SRS references: standards, regulations, interfacing-system specs, prior versions.
+ISO/IEC/IEEE 29148:2018 · Systems and software engineering.
 
-1. ISO/IEC/IEEE 29148:2018 · Systems and software engineering — Life cycle processes — Requirements engineering
-2. `<regulation citation>`
-3. `<interfacing system SRS>`
-
+Selise SupplyFlow Exercise Specification (Source Document).
 ### 1.5 · Overview of this Document
-One short paragraph: what each remaining section contains. Readers use this as a navigation map.
-
----
+This document details the transition from manual to automated supply tracking. Section 2 provides the high-level perspective and user classes; Section 3 lists specific functional and accessibility requirements; Section 4 outlines verification methods.
 
 ## § 02 · Overall Description
 
-*The "big picture" section. Non-specialists read this and specialists skim it.*
+The Selise SupplyFlow portal is a centralized digital solution designed to replace a slow, error-prone email-based ordering system. It provides employees with a real-time catalog for bulk requests while giving admins a dashboard to manage stock and approvals. To maintain fairness, the system limits users to two units per item and uses automated stock updates to prevent inventory discrepancies. Built for high performance, the platform ensures that 99% of logins and request submissions occur within two seconds. While the system is optimized for mobile browser access with accessible, touch-friendly UI elements, it remains focused strictly on internal office needs, excluding external payments or home shipping.
 
 ### 2.1 · Product Perspective
-Is this system standalone, a component of a larger system, a replacement for an existing system? Include a **context diagram** showing this system and its interfaces to external systems, users, and hardware.
-
-- **System interfaces:** `<list external systems this connects to>`
-- **User interfaces:** `<web · mobile · kiosk · API>`
-- **Hardware interfaces:** `<sensors · printers · POS terminals>`
-- **Software interfaces:** `<OS · databases · third-party APIs · versions>`
-- **Communication interfaces:** `<HTTP/REST · MQTT · SFTP · protocols>`
-- **Memory / storage constraints:** `<if applicable>`
-- **Operations:** `<modes — normal, degraded, maintenance>`
-- **Site adaptation:** `<per-deployment configuration>`
-
+Selise SupplyFlow is a new, standalone web-based portal designed to replace the legacy email-based ordering system. It serves as a central dashboard for employees and managers to coordinate office supply procurement.
+- **System interfaces:** Manager's inbox for receiving real-time request notifications.
+Internal inventory database for tracking stock levels and record-keeping.
+- **User interfaces:** Web browser portal accessible via desktop.
+Mobile-optimized browser interface with touch-friendly elements (min. 44x44 pixels).
+- **Hardware interfaces:** Standard computing devices (PC/Laptop).
+Mobile and tablet devices.
+- **Software interfaces:** Standard 4G network connection for data transmission.
+Email system for automated order notifications.
+- **Communication interfaces:** HTTPS for secure web access.
+Email protocols for sending notifications to users and admins.
+- **Memory / storage constraints:** The system must maintain a persistent record of all transactions to keep everything organized.
+- **Operations:** Normal: Real-time catalog browsing, stock management, and request processing.
+Pending: Active monitoring of requests awaiting admin review.
+- **Site adaptation:** Internal office deployment only; no public app store distribution or external shipping configurations required.
 ### 2.2 · Product Functions
 A summary of the **major functions** the product will perform. Two or three paragraphs, or a bulleted list of function groups. Details go in §3.
 
